@@ -1,0 +1,12 @@
+Spectro-Spatial Survey Fusion — research code
+
+The Gaussian densification implementation in src/survey_fusion/models/splat_strategy.py
+is a local adaptation of gsplat's DefaultStrategy and strategy operations.
+The source records the port as based on gsplat main in July 2026; an exact upstream
+commit was not recorded. The deviations are described in that module's header.
+
+gsplat: https://github.com/nerfstudio-project/gsplat
+Copyright 2023-2026 the Regents of the University of California, Nerfstudio Team and contributors.
+Upstream license: Apache License, Version 2.0. The upstream copyright notices are retained in that module.
+
+This artifact retains the source repository's Apache License, Version 2.0.

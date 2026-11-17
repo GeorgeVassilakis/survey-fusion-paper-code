@@ -1,0 +1,643 @@
+{
+  "frame_bands": {
+    "frame": "001907-3-0188",
+    "box": {
+      "y": 752,
+      "x": 160,
+      "n": 379
+    },
+    "bands": {
+      "u": {
+        "label": "u-001907-3-0188",
+        "exposure_id": 297,
+        "fitted": true,
+        "psf_fwhm_arcsec": 1.6083966493606567,
+        "inside_fraction": 1.0,
+        "median_offset_px": [
+          2.815099195109383,
+          4.577299836802581
+        ]
+      },
+      "g": {
+        "label": "g-001907-3-0188",
+        "exposure_id": 51,
+        "fitted": true,
+        "psf_fwhm_arcsec": 1.4399611949920654,
+        "inside_fraction": 1.0,
+        "median_offset_px": [
+          1.2159939458775852,
+          9.304999745513214
+        ]
+      },
+      "r": {
+        "label": "r-001907-3-0188",
+        "exposure_id": 215,
+        "fitted": false,
+        "psf_fwhm_arcsec": 1.3842623233795166,
+        "inside_fraction": 1.0,
+        "median_offset_px": [
+          1.1368683772161603e-13,
+          0.0
+        ]
+      },
+      "i": {
+        "label": "i-001907-3-0188",
+        "exposure_id": 133,
+        "fitted": true,
+        "psf_fwhm_arcsec": 1.253737211227417,
+        "inside_fraction": 1.0,
+        "median_offset_px": [
+          -1.459881698610502,
+          3.157132633901483
+        ]
+      },
+      "z": {
+        "label": "z-001907-3-0188",
+        "exposure_id": 379,
+        "fitted": true,
+        "psf_fwhm_arcsec": 1.2083934545516968,
+        "inside_fraction": 1.0,
+        "median_offset_px": [
+          -0.9942635300737948,
+          7.564371839357591
+        ]
+      }
+    }
+  },
+  "exposure": "r-001907-3-0188",
+  "exposure_id": 215,
+  "psf_fwhm_arcsec": 1.3842623233795166,
+  "hole_fraction": 0.8645130054202491,
+  "hole": {
+    "n_pixels": 2067718,
+    "model_flux": 19945.741457223136,
+    "obs_flux": 18263.995506716976,
+    "flux_ratio_model_over_obs": 1.0920798491155816,
+    "n_significant_pixels": 12748,
+    "median_pixel_flux_ratio": 0.7361120508077004,
+    "mean_square_pull": 1.1404635224310797,
+    "median_abs_pull": 0.6832439366213471,
+    "source_sky": {
+      "source": {
+        "n_pixels": 6193,
+        "model_flux": 12837.805827677512,
+        "obs_flux": 14248.124366521835,
+        "flux_ratio_model_over_obs": 0.901017249529483,
+        "mean_square_pull": 27.68689091324151,
+        "mean_pull": 2.0014249278904908
+      },
+      "sky": {
+        "n_pixels": 2061525,
+        "model_flux": 7107.935629545624,
+        "obs_flux": 4015.871140195141,
+        "flux_ratio_model_over_obs": 1.7699610822672542,
+        "mean_square_pull": 1.060715750839036,
+        "mean_pull": -0.049247269064331696
+      }
+    }
+  },
+  "covered": {
+    "n_pixels": 324054,
+    "model_flux": 5237.987936123435,
+    "obs_flux": 4255.191120426094,
+    "flux_ratio_model_over_obs": 1.23096420063946,
+    "n_significant_pixels": 1817,
+    "median_pixel_flux_ratio": 0.7998111835194812,
+    "mean_square_pull": 1.393060821030426,
+    "median_abs_pull": 0.6951527878637834,
+    "source_sky": {
+      "source": {
+        "n_pixels": 861,
+        "model_flux": 3695.4385381303728,
+        "obs_flux": 3381.3112255334854,
+        "flux_ratio_model_over_obs": 1.0929010350259392,
+        "mean_square_pull": 120.24160639282742,
+        "mean_pull": -1.4310822722479315
+      },
+      "sky": {
+        "n_pixels": 323193,
+        "model_flux": 1542.549397993063,
+        "obs_flux": 873.8798948926091,
+        "flux_ratio_model_over_obs": 1.765173231480084,
+        "mean_square_pull": 1.07644320326854,
+        "mean_pull": -0.060978123449226
+      }
+    }
+  },
+  "zoom": {
+    "y": 752,
+    "x": 160,
+    "size_px": 379,
+    "n_above_5sigma": 1326,
+    "galaxy_yx": [
+      229,
+      235
+    ],
+    "residual": {
+      "background_observed": 0.006532070226967335,
+      "background_predicted": 0.0033879068214446306,
+      "peak": 2.8791229609772566,
+      "annulus_pixels": 5980
+    },
+    "msp": 1.1238563013560954,
+    "fraction_beyond_limit": 0.00013923601200214423
+  },
+  "all_withheld": [
+    {
+      "label": "g-001462-3-0165",
+      "hole_fraction": 0.8673854933589848,
+      "flux_ratio_hole": 0.9007223017466296,
+      "flux_ratio_covered": 0.9625254932278308,
+      "msp_hole": 1.5585169600272888,
+      "msp_covered": 4.555197970646608,
+      "source_sky": {
+        "hole": {
+          "source": {
+            "n_pixels": 6552,
+            "model_flux": 46486.85821951892,
+            "obs_flux": 57789.480022490025,
+            "flux_ratio_model_over_obs": 0.8044173126566904,
+            "mean_square_pull": 228.28991472514252,
+            "mean_pull": 4.008442193118304
+          },
+          "sky": {
+            "n_pixels": 2619239,
+            "model_flux": 12215.917210440235,
+            "obs_flux": 7383.520930329803,
+            "flux_ratio_model_over_obs": 1.6544839956043276,
+            "mean_square_pull": 0.9913506502109505,
+            "mean_pull": -0.055618423167988366
+          }
+        },
+        "covered": {
+          "source": {
+            "n_pixels": 3533,
+            "model_flux": 27270.055689815432,
+            "obs_flux": 31857.218809187412,
+            "flux_ratio_model_over_obs": 0.856008675871948,
+            "mean_square_pull": 395.3353334361833,
+            "mean_pull": 2.015596293725848
+          },
+          "sky": {
+            "n_pixels": 397924,
+            "model_flux": 6281.991572112962,
+            "obs_flux": 3001.127798767411,
+            "flux_ratio_model_over_obs": 2.0932102840448947,
+            "mean_square_pull": 1.085625342205646,
+            "mean_pull": -0.1605270595575966
+          }
+        }
+      }
+    },
+    {
+      "label": "g-001462-4-0166",
+      "hole_fraction": 0.8670966904547235,
+      "flux_ratio_hole": 1.1192456898866967,
+      "flux_ratio_covered": 1.1184909444400843,
+      "msp_hole": 1.3672806721274395,
+      "msp_covered": 1.240800894608379,
+      "source_sky": {
+        "hole": {
+          "source": {
+            "n_pixels": 5521,
+            "model_flux": 27026.554148622017,
+            "obs_flux": 28722.230419188738,
+            "flux_ratio_model_over_obs": 0.9409629319931271,
+            "mean_square_pull": 130.755452932991,
+            "mean_pull": 0.1287935326359123
+          },
+          "sky": {
+            "n_pixels": 2613235,
+            "model_flux": 10418.060719596288,
+            "obs_flux": 4732.993225236365,
+            "flux_ratio_model_over_obs": 2.201156905116003,
+            "mean_square_pull": 1.0939213687918319,
+            "mean_pull": -0.06263316842726718
+          }
+        },
+        "covered": {
+          "source": {
+            "n_pixels": 705,
+            "model_flux": 6230.937001656741,
+            "obs_flux": 6550.055899381638,
+            "flux_ratio_model_over_obs": 0.9512799733884678,
+            "mean_square_pull": 76.12472824154257,
+            "mean_pull": 2.2788966040730925
+          },
+          "sky": {
+            "n_pixels": 400682,
+            "model_flux": 1782.8071790141485,
+            "obs_flux": 614.7264535792638,
+            "flux_ratio_model_over_obs": 2.9001634281942783,
+            "mean_square_pull": 1.1090426205167332,
+            "mean_pull": -0.07584029089134212
+          }
+        }
+      }
+    },
+    {
+      "label": "z-001907-3-0186",
+      "hole_fraction": 0.866649081973648,
+      "flux_ratio_hole": 1.1740637243593588,
+      "flux_ratio_covered": 1.0616072374176901,
+      "msp_hole": 1.4475985903630262,
+      "msp_covered": 1.3951677099481616,
+      "source_sky": {
+        "hole": {
+          "source": {
+            "n_pixels": 6196,
+            "model_flux": 72222.36956664461,
+            "obs_flux": 62437.33810180426,
+            "flux_ratio_model_over_obs": 1.156717627021284,
+            "mean_square_pull": 162.78788863019852,
+            "mean_pull": -4.164398136386031
+          },
+          "sky": {
+            "n_pixels": 2625585,
+            "model_flux": 22414.114119328253,
+            "obs_flux": 18168.5793816035,
+            "flux_ratio_model_over_obs": 1.2336745569674834,
+            "mean_square_pull": 1.066858893462404,
+            "mean_pull": -0.02840565541818665
+          }
+        },
+        "covered": {
+          "source": {
+            "n_pixels": 1161,
+            "model_flux": 23304.346911832195,
+            "obs_flux": 22705.59265834093,
+            "flux_ratio_model_over_obs": 1.0263703424306483,
+            "mean_square_pull": 117.25664953623618,
+            "mean_pull": -0.8291889357499544
+          },
+          "sky": {
+            "n_pixels": 403790,
+            "model_flux": 4575.179552887493,
+            "obs_flux": 3556.027912874588,
+            "flux_ratio_model_over_obs": 1.2865983240241365,
+            "mean_square_pull": 1.0620361801918021,
+            "mean_pull": -0.03430436594262759
+          }
+        }
+      }
+    },
+    {
+      "label": "i-001462-4-0169",
+      "hole_fraction": 0.8651237757755552,
+      "flux_ratio_hole": 0.8911254149336854,
+      "flux_ratio_covered": 0.9565953754844289,
+      "msp_hole": 1.4382966985206997,
+      "msp_covered": 1.3009280568468713,
+      "source_sky": {
+        "hole": {
+          "source": {
+            "n_pixels": 10428,
+            "model_flux": 34466.9660109448,
+            "obs_flux": 38525.570777237415,
+            "flux_ratio_model_over_obs": 0.8946516642216599,
+            "mean_square_pull": 100.16212034943808,
+            "mean_pull": 2.774127089312117
+          },
+          "sky": {
+            "n_pixels": 2612116,
+            "model_flux": 10027.018424611135,
+            "obs_flux": 11404.532988086157,
+            "flux_ratio_model_over_obs": 0.8792134176021013,
+            "mean_square_pull": 1.0441748321748834,
+            "mean_pull": -0.005535849205192993
+          }
+        },
+        "covered": {
+          "source": {
+            "n_pixels": 4879,
+            "model_flux": 7365.568537916397,
+            "obs_flux": 7633.806881994009,
+            "flux_ratio_model_over_obs": 0.9648617854467461,
+            "mean_square_pull": 22.77135046938331,
+            "mean_pull": 0.4381006582870599
+          },
+          "sky": {
+            "n_pixels": 403986,
+            "model_flux": 2570.8578666628036,
+            "obs_flux": 2753.4756192906143,
+            "flux_ratio_model_over_obs": 0.9336773671252412,
+            "mean_square_pull": 1.0416265192916958,
+            "mean_pull": -0.006591072938667477
+          }
+        }
+      }
+    },
+    {
+      "label": "u-001462-4-0166",
+      "hole_fraction": 0.8650265742478878,
+      "flux_ratio_hole": 0.5485402662782213,
+      "flux_ratio_covered": 0.8243288957015174,
+      "msp_hole": 1.1219229192956899,
+      "msp_covered": 1.0869784453532794,
+      "source_sky": {
+        "hole": {
+          "source": {
+            "n_pixels": 863,
+            "model_flux": 9839.157436728477,
+            "obs_flux": 15325.153282642365,
+            "flux_ratio_model_over_obs": 0.6420266900607475,
+            "mean_square_pull": 208.53105049788678,
+            "mean_pull": 3.95149106829071
+          },
+          "sky": {
+            "n_pixels": 2621145,
+            "model_flux": 8983.837342188606,
+            "obs_flux": 18989.546906331554,
+            "flux_ratio_model_over_obs": 0.4730938229596825,
+            "mean_square_pull": 1.0536344128985524,
+            "mean_pull": -0.046537031473650674
+          }
+        },
+        "covered": {
+          "source": {
+            "n_pixels": 128,
+            "model_flux": 3598.6146458387375,
+            "obs_flux": 3718.5356233119965,
+            "flux_ratio_model_over_obs": 0.9677504830876278,
+            "mean_square_pull": 29.72137355240242,
+            "mean_pull": 0.3497037224254545
+          },
+          "sky": {
+            "n_pixels": 408994,
+            "model_flux": 2245.4143435859,
+            "obs_flux": 3370.9028519112617,
+            "flux_ratio_model_over_obs": 0.6661165990923699,
+            "mean_square_pull": 1.0780169384028053,
+            "mean_pull": -0.0519994037249168
+          }
+        }
+      }
+    },
+    {
+      "label": "z-001462-5-0166",
+      "hole_fraction": 0.8649764441823636,
+      "flux_ratio_hole": 1.6433149968109728,
+      "flux_ratio_covered": 1.4728119074776984,
+      "msp_hole": 1.3638600097903786,
+      "msp_covered": 1.061048869854003,
+      "source_sky": {
+        "hole": {
+          "source": {
+            "n_pixels": 6157,
+            "model_flux": 60959.130889019354,
+            "obs_flux": 61431.458284795284,
+            "flux_ratio_model_over_obs": 0.9923113107036101,
+            "mean_square_pull": 123.65967950808852,
+            "mean_pull": -0.4589743482122029
+          },
+          "sky": {
+            "n_pixels": 2606308,
+            "model_flux": 35710.40434339531,
+            "obs_flux": -2605.526908271492,
+            "flux_ratio_model_over_obs": -13.705636364771076,
+            "mean_square_pull": 1.074955029776113,
+            "mean_pull": -0.09882647287806347
+          }
+        },
+        "covered": {
+          "source": {
+            "n_pixels": 623,
+            "model_flux": 8719.958415984642,
+            "obs_flux": 8902.255072593689,
+            "flux_ratio_model_over_obs": 0.9795224181825275,
+            "mean_square_pull": 22.670416009138535,
+            "mean_pull": -0.35171686918583916
+          },
+          "sky": {
+            "n_pixels": 407185,
+            "model_flux": 3436.403802573432,
+            "obs_flux": -648.4093799846702,
+            "flux_ratio_model_over_obs": -5.299744125624272,
+            "mean_square_pull": 1.027986169293387,
+            "mean_pull": -0.07296392499887272
+          }
+        }
+      }
+    },
+    {
+      "label": "r-001462-3-0167",
+      "hole_fraction": 0.8646826857977694,
+      "flux_ratio_hole": 1.0094235642748304,
+      "flux_ratio_covered": 1.0556290536405175,
+      "msp_hole": 1.2297529530699443,
+      "msp_covered": 1.2556904646274343,
+      "source_sky": {
+        "hole": {
+          "source": {
+            "n_pixels": 7555,
+            "model_flux": 35028.46952768228,
+            "obs_flux": 39265.969062298536,
+            "flux_ratio_model_over_obs": 0.8920821353499991,
+            "mean_square_pull": 67.60846488686515,
+            "mean_pull": 2.5902292257213593
+          },
+          "sky": {
+            "n_pixels": 2613191,
+            "model_flux": 10401.87776315706,
+            "obs_flux": 5740.259144268532,
+            "flux_ratio_model_over_obs": 1.8120920156615241,
+            "mean_square_pull": 1.037845370095785,
+            "mean_pull": -0.047475936283146926
+          }
+        },
+        "covered": {
+          "source": {
+            "n_pixels": 2199,
+            "model_flux": 6430.147844192921,
+            "obs_flux": 6674.880981475115,
+            "flux_ratio_model_over_obs": 0.9633352058319234,
+            "mean_square_pull": 39.92009766623054,
+            "mean_pull": 0.5733521521380271
+          },
+          "sky": {
+            "n_pixels": 407931,
+            "model_flux": 2441.523028372663,
+            "obs_flux": 1729.2746657857367,
+            "flux_ratio_model_over_obs": 1.4118769427893627,
+            "mean_square_pull": 1.047265433344386,
+            "mean_pull": -0.04679683038305795
+          }
+        }
+      }
+    },
+    {
+      "label": "r-001907-3-0188",
+      "hole_fraction": 0.8645130054202491,
+      "flux_ratio_hole": 1.0920798491155816,
+      "flux_ratio_covered": 1.23096420063946,
+      "msp_hole": 1.1404635224310797,
+      "msp_covered": 1.393060821030426,
+      "source_sky": {
+        "hole": {
+          "source": {
+            "n_pixels": 6193,
+            "model_flux": 12837.805827677512,
+            "obs_flux": 14248.124366521835,
+            "flux_ratio_model_over_obs": 0.901017249529483,
+            "mean_square_pull": 27.68689091324151,
+            "mean_pull": 2.0014249278904908
+          },
+          "sky": {
+            "n_pixels": 2061525,
+            "model_flux": 7107.935629545624,
+            "obs_flux": 4015.871140195141,
+            "flux_ratio_model_over_obs": 1.7699610822672542,
+            "mean_square_pull": 1.060715750839036,
+            "mean_pull": -0.049247269064331696
+          }
+        },
+        "covered": {
+          "source": {
+            "n_pixels": 861,
+            "model_flux": 3695.4385381303728,
+            "obs_flux": 3381.3112255334854,
+            "flux_ratio_model_over_obs": 1.0929010350259392,
+            "mean_square_pull": 120.24160639282742,
+            "mean_pull": -1.4310822722479315
+          },
+          "sky": {
+            "n_pixels": 323193,
+            "model_flux": 1542.549397993063,
+            "obs_flux": 873.8798948926091,
+            "flux_ratio_model_over_obs": 1.765173231480084,
+            "mean_square_pull": 1.07644320326854,
+            "mean_pull": -0.060978123449226
+          }
+        }
+      }
+    },
+    {
+      "label": "u-001462-5-0166",
+      "hole_fraction": 0.8638449724875037,
+      "flux_ratio_hole": 0.4889947618751205,
+      "flux_ratio_covered": 1.44060710340761,
+      "msp_hole": 1.7311914914769986,
+      "msp_covered": 0.9695250142342615,
+      "source_sky": {
+        "hole": {
+          "source": {
+            "n_pixels": 2961,
+            "model_flux": 47748.552814781666,
+            "obs_flux": 107141.55717921257,
+            "flux_ratio_model_over_obs": 0.44565856677735277,
+            "mean_square_pull": 602.625758795691,
+            "mean_pull": 3.364402570280098
+          },
+          "sky": {
+            "n_pixels": 2602468,
+            "model_flux": 19463.263620521626,
+            "obs_flux": 30307.392534624785,
+            "flux_ratio_model_over_obs": 0.6421952531312535,
+            "mean_square_pull": 1.0475139923539447,
+            "mean_pull": -0.047384995242668024
+          }
+        },
+        "covered": {
+          "source": {
+            "n_pixels": 258,
+            "model_flux": 2817.0264753103256,
+            "obs_flux": 2761.0326293706894,
+            "flux_ratio_model_over_obs": 1.0202800377452976,
+            "mean_square_pull": 7.045390312353218,
+            "mean_pull": -0.2971200180129495
+          },
+          "sky": {
+            "n_pixels": 410397,
+            "model_flux": 5429.0490053876265,
+            "obs_flux": 2962.995428794995,
+            "flux_ratio_model_over_obs": 1.8322839625829386,
+            "mean_square_pull": 0.9657053633915051,
+            "mean_pull": -0.08020710498907256
+          }
+        }
+      }
+    },
+    {
+      "label": "i-002125-1-0209",
+      "hole_fraction": 0.12073688513772336,
+      "flux_ratio_hole": 1.1514141072274373,
+      "flux_ratio_covered": 1.1212840686087864,
+      "msp_hole": 1.083923314245305,
+      "msp_covered": 1.0250961515649726,
+      "source_sky": {
+        "hole": {
+          "source": {
+            "n_pixels": 674,
+            "model_flux": 2360.7721864016494,
+            "obs_flux": 2263.9677192270756,
+            "flux_ratio_model_over_obs": 1.0427587665462046,
+            "mean_square_pull": 33.97486377960701,
+            "mean_pull": 0.13407721915945053
+          },
+          "sky": {
+            "n_pixels": 111850,
+            "model_flux": 669.206870983322,
+            "obs_flux": 367.5607971996069,
+            "flux_ratio_model_over_obs": 1.820669875791742,
+            "mean_square_pull": 0.8857248889108948,
+            "mean_pull": -0.06896960588030764
+          }
+        },
+        "covered": {
+          "source": {
+            "n_pixels": 2866,
+            "model_flux": 10279.123993505724,
+            "obs_flux": 10145.786068201065,
+            "flux_ratio_model_over_obs": 1.013142197598919,
+            "mean_square_pull": 46.167560796206104,
+            "mean_pull": 0.12365313164802448
+          },
+          "sky": {
+            "n_pixels": 816587,
+            "model_flux": 3246.802091560316,
+            "obs_flux": 1917.1036702111596,
+            "flux_ratio_model_over_obs": 1.6935975565696437,
+            "mean_square_pull": 0.8666582831302048,
+            "mean_pull": -0.04698325813748625
+          }
+        }
+      }
+    }
+  ],
+  "render_provenance": {
+    "run": "clean_s123",
+    "seed": 123,
+    "step": 960201,
+    "checkpoint_sha256": "c91c0a8d22bcb4888bd32568f878f54d3ff43db75eb75d5773b49edfb2929408",
+    "source_commit": "79b9d2db"
+  },
+  "source_sky_definition": "Scored pixels: finite data, prediction and sigma, sigma > 0, not fpM-flagged in the withheld frame (Section 3.2). Regions: exact coverage_depth == 0 (no fitted same-band sample) and > 0 (covered), as for the existing hole/covered statistics. Within each region, source = scored pixels with d > 5 sigma (the Section 3.2 source selection) and sky = the remaining scored pixels. pull = (d - m) / sigma (Equation 7 sign). flux_ratio_model_over_obs is the summed prediction over the summed observation for the selected pixels.",
+  "source_sky_provenance": {
+    "date": "2026-10-20",
+    "script": "external-artifact:build.py",
+    "script_sha256": "c1143ff8bc026161137503999dc1e312bbd84fbc6940a137609865331463248b",
+    "installed_before_sha256": "9aa1d55343421f6266cfe7abe387b5403a7b83ce28d3881f06fe53b04e75cc07",
+    "inputs_sha256": {
+      "frames/exposure_0011_holdout.npz": "30dcc9bfff4c8b691f7ab1a272e03d37249171951a9991471002a734f7861360",
+      "frames_fpm/exposure_0011.npz": "a08fdbd9f8ee20342612895606577b1881089aa365860991eda25e9813adf58f",
+      "frames/exposure_0022_holdout.npz": "85697c7dcb7f491ad9db7af223d88fd1ec1ecbf2e33db523d36e83d92d8c5bc0",
+      "frames_fpm/exposure_0022.npz": "a140f0481bb80f71c29e321d9aee3e61815abf508b46bca6055da3e1c9d48660",
+      "frames/exposure_0107_holdout.npz": "2cd1220e49e09025c99f461e0839872348244d76c69974cb92c55c36ddb76a80",
+      "frames_fpm/exposure_0107.npz": "80c72f331ea90aa5783100384e9c2d1e65ffb5899ed978fa2383ddc970464e3c",
+      "frames/exposure_0159_holdout.npz": "bcb6e1ff57e8e3b6352372fb0c6f914d15aa252fb534365562f30d10c4f46e14",
+      "frames_fpm/exposure_0159.npz": "3e13975bc70884b6f7ee142f5258277d6dcfcd31078fc9b1a3c2ea3f30544ddd",
+      "frames/exposure_0177_holdout.npz": "ae645a36ac03eddff42103735d4a73a85d9efe18e77ef9b38753a53a3edf02bf",
+      "frames_fpm/exposure_0177.npz": "d690cacdb594253d90de7fc512860862edc5bf1ab517c5fa8ca20ade5cdc79af",
+      "frames/exposure_0215_holdout.npz": "f7e152e44d51333f7d9e81d53770df15ac7ef8e7dff81ef14a4be766036810e9",
+      "frames_fpm/exposure_0215.npz": "d0715e0bd797ad24f8240254478e8c99c025ae69d70c86f2e1e0e3f80321a610",
+      "frames/exposure_0268_holdout.npz": "f514941ebf7d2153cdfe2a214ee83a5a30a26f651c108164c2cb1709a47b2aa4",
+      "frames_fpm/exposure_0268.npz": "efbd1ed1fe0e652d72e1290e44becf90c1735d2dddda18455387529de7bcd212",
+      "frames/exposure_0278_holdout.npz": "859fe0b33d519a4a07de6f645c8ae4d5e54a224826520160bd06f36d0888393e",
+      "frames_fpm/exposure_0278.npz": "60dedc2c999dc4c2b9fdb74fc54a1e300ddc47e490ebc378517ca317133068ab",
+      "frames/exposure_0360_holdout.npz": "af1872554990b685dca939a4052320dc3a2358f1666575d524f6203e00f812b7",
+      "frames_fpm/exposure_0360.npz": "99eb677d0f709923e2cd398beb8677473ac7aa716ccaba35c0a1d6e7d095b7cd",
+      "frames/exposure_0377_holdout.npz": "354117d953f9a87325cfab43c3cff60659c6b2304b5cc5cab85fc2cb9c86ae6f",
+      "frames_fpm/exposure_0377.npz": "f83418edd8406356d31cce06512cf0f818d22f9d59be514ec878ce5d8ba9fd1a"
+    }
+  }
+}

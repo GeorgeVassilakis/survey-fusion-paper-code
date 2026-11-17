@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying paper, Spectro-Spatial Survey Fusion, when using this research artifact."
+type: software
+title: "Spectro-Spatial Survey Fusion: paper code"
+version: 0.1.0
+date-released: 2026-11-17
+authors:
+  - family-names: Vassilakis
+    given-names: Georgios N.
+  - family-names: Cranmer
+    given-names: Miles
+  - family-names: Belokurov
+    given-names: Vasily
+repository-code: "https://github.com/GeorgeVassilakis/survey-fusion-paper-code"
+license: Apache-2.0

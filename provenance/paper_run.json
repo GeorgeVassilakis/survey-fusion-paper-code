@@ -1,0 +1,49 @@
+{
+  "run": "clean_s123",
+  "seed": 123,
+  "step": 960201,
+  "n_components": 2855026,
+  "n_templates": 32,
+  "image_population": 872911804,
+  "spectrum_population": 2189185,
+  "epochs_completed": 11,
+  "source_commit": "79b9d2db152f89e36a419b77a70134622ab85c28",
+  "checkpoint_sha256": "c91c0a8d22bcb4888bd32568f878f54d3ff43db75eb75d5773b49edfb2929408",
+  "recipe": {
+    "ab": true,
+    "prior": false,
+    "purity": true,
+    "dedup": true,
+    "no_calibration": true,
+    "model_sigma": false,
+    "poisson_variance": true,
+    "fpm_mask": true,
+    "adam_eps": 1e-08
+  },
+  "training_prepared_digest": "b6c784cfeb936bc04e8fa5efbadb8e36b64f196b94ac91db6db04acbe38fed49",
+  "spectral_loss_multiplier": 5.0,
+  "objective_reference_denominator": 875100989,
+  "evaluation_metrics": {
+    "withheld89_median_msp": 6.007246037633813,
+    "withheld89_pooled_msp": 19.066699186437894,
+    "fitted800_median_msp": 1.453750348967908,
+    "held_images_twin_free_fpm_unmasked_msp": 1.3506130490042891,
+    "held_stars_median_msp10": 1.73588646696447,
+    "trained_stars_median_msp10": 1.7048779131010772
+  },
+  "paper_title": "Spectro-Spatial Survey Fusion",
+  "snapshot_kind": "archival research implementation",
+  "input_original_sha256": {
+    "eigen_mog.npz": "4c50fa57198a550dcad1b3550909236efa32ce35b7d2007115b4f18a10365697",
+    "spectral_response.json": "4c338591de918c8afda3b5396c555915efc72b69ab3c7f53bc23497bd090f6d5",
+    "field_overlap_table.json": "48ff5590e60ab7942957b6a688de12914023968e9c4817d7027329954b7a8774",
+    "scene_manifest.json": "54c8168ee20eab56471b87629e86274e93c233b929b96e26557104336d886979",
+    "image_pixel_mask.json": "f027a68b6304d947601ad77b40a3e762cd9fa2a2c73e655bc1cccdbfa4241dfc",
+    "original_resolved_config.yaml": "13b8d3a1146a7309709c5479e70f49c0eeabe03e33dfa38992d43e37bb220337",
+    "fpm_mask_original.npz": "7b4b8bceeab26da76942dea72f51fb6b682584a89a32a9b9c7fcf052339ef539"
+  },
+  "runtime_export": "Source implementation after package/environment naming substitutions and edits to comments, docstrings and message strings, except package version metadata.",
+  "checkpoints_distributed": false,
+  "raw_observations_distributed": false,
+  "full_training_reproduced_for_this_export": false
+}

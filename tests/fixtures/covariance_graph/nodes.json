@@ -1,0 +1,774 @@
+[
+  {
+    "name": "logs_1",
+    "op": "placeholder",
+    "target": "logs_1",
+    "args": "()",
+    "shape": [
+      17,
+      2
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "theta_1",
+    "op": "placeholder",
+    "target": "theta_1",
+    "args": "()",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "ga_1",
+    "op": "placeholder",
+    "target": "ga_1",
+    "args": "()",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "gb_1",
+    "op": "placeholder",
+    "target": "gb_1",
+    "args": "()",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "gd_1",
+    "op": "placeholder",
+    "target": "gd_1",
+    "args": "()",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "select",
+    "op": "call_function",
+    "target": "aten.select.int",
+    "args": "(logs_1, 1, 0)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(select, 2.0)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "exp",
+    "op": "call_function",
+    "target": "aten.exp.default",
+    "args": "(mul,)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "detach",
+    "op": "call_function",
+    "target": "aten.detach.default",
+    "args": "(exp,)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "select_1",
+    "op": "call_function",
+    "target": "aten.select.int",
+    "args": "(logs_1, 1, 1)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_1",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(select_1, 2.0)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "exp_1",
+    "op": "call_function",
+    "target": "aten.exp.default",
+    "args": "(mul_1,)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "detach_1",
+    "op": "call_function",
+    "target": "aten.detach.default",
+    "args": "(exp_1,)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "cos",
+    "op": "call_function",
+    "target": "aten.cos.default",
+    "args": "(theta_1,)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "sin",
+    "op": "call_function",
+    "target": "aten.sin.default",
+    "args": "(theta_1,)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_2",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(cos, cos)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_3",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(mul_2, exp)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_4",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(sin, sin)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_5",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(mul_4, exp_1)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "add",
+    "op": "call_function",
+    "target": "aten.add.Tensor",
+    "args": "(mul_3, mul_5)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_6",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(cos, sin)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "sub",
+    "op": "call_function",
+    "target": "aten.sub.Tensor",
+    "args": "(exp, exp_1)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_7",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(mul_6, sub)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_8",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(sin, sin)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_9",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(mul_8, exp)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_10",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(cos, cos)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_11",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(mul_10, exp_1)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "add_1",
+    "op": "call_function",
+    "target": "aten.add.Tensor",
+    "args": "(mul_9, mul_11)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_12",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(gd_1, mul_10)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_13",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(gd_1, exp_1)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_14",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(mul_13, cos)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_15",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(mul_13, cos)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "add_2",
+    "op": "call_function",
+    "target": "aten.add.Tensor",
+    "args": "(mul_15, mul_14)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_16",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(gd_1, mul_8)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_17",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(gd_1, exp)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_18",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(mul_17, sin)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_19",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(mul_17, sin)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "add_3",
+    "op": "call_function",
+    "target": "aten.add.Tensor",
+    "args": "(mul_19, mul_18)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_20",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(gb_1, mul_6)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_21",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(gb_1, sub)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "neg",
+    "op": "call_function",
+    "target": "aten.neg.default",
+    "args": "(mul_20,)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "add_4",
+    "op": "call_function",
+    "target": "aten.add.Tensor",
+    "args": "(mul_16, mul_20)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "add_5",
+    "op": "call_function",
+    "target": "aten.add.Tensor",
+    "args": "(mul_12, neg)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_22",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(mul_21, cos)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_23",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(mul_21, sin)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "add_6",
+    "op": "call_function",
+    "target": "aten.add.Tensor",
+    "args": "(add_2, mul_23)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "add_7",
+    "op": "call_function",
+    "target": "aten.add.Tensor",
+    "args": "(add_3, mul_22)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_24",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(ga_1, mul_4)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_25",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(ga_1, exp_1)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "add_8",
+    "op": "call_function",
+    "target": "aten.add.Tensor",
+    "args": "(add_5, mul_24)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_26",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(mul_25, sin)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_27",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(mul_25, sin)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "add_9",
+    "op": "call_function",
+    "target": "aten.add.Tensor",
+    "args": "(add_7, mul_27)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "add_10",
+    "op": "call_function",
+    "target": "aten.add.Tensor",
+    "args": "(add_9, mul_26)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_28",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(ga_1, mul_2)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_29",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(ga_1, exp)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "add_11",
+    "op": "call_function",
+    "target": "aten.add.Tensor",
+    "args": "(add_4, mul_28)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_30",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(mul_29, cos)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_31",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(mul_29, cos)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "add_12",
+    "op": "call_function",
+    "target": "aten.add.Tensor",
+    "args": "(add_6, mul_31)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "add_13",
+    "op": "call_function",
+    "target": "aten.add.Tensor",
+    "args": "(add_12, mul_30)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "cos_1",
+    "op": "call_function",
+    "target": "aten.cos.default",
+    "args": "(theta_1,)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_32",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(add_10, cos_1)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "sin_1",
+    "op": "call_function",
+    "target": "aten.sin.default",
+    "args": "(theta_1,)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "neg_1",
+    "op": "call_function",
+    "target": "aten.neg.default",
+    "args": "(sin_1,)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_33",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(add_13, neg_1)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "add_14",
+    "op": "call_function",
+    "target": "aten.add.Tensor",
+    "args": "(mul_32, mul_33)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "detach_2",
+    "op": "call_function",
+    "target": "aten.detach.default",
+    "args": "(detach_1,)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_34",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(add_8, detach_2)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_35",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(mul_34, 2.0)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "select_backward",
+    "op": "call_function",
+    "target": "aten.select_backward.default",
+    "args": "(mul_35, [17, 2], 1, 1)",
+    "shape": [
+      17,
+      2
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "detach_3",
+    "op": "call_function",
+    "target": "aten.detach.default",
+    "args": "(detach,)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_36",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(add_11, detach_3)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "mul_37",
+    "op": "call_function",
+    "target": "aten.mul.Tensor",
+    "args": "(mul_36, 2.0)",
+    "shape": [
+      17
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "select_backward_1",
+    "op": "call_function",
+    "target": "aten.select_backward.default",
+    "args": "(mul_37, [17, 2], 1, 0)",
+    "shape": [
+      17,
+      2
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "add_15",
+    "op": "call_function",
+    "target": "aten.add.Tensor",
+    "args": "(select_backward, select_backward_1)",
+    "shape": [
+      17,
+      2
+    ],
+    "dtype": "torch.float32"
+  },
+  {
+    "name": "output",
+    "op": "output",
+    "target": "output",
+    "args": "((add, mul_7, add_1, add_15, add_14),)",
+    "shape": null,
+    "dtype": null
+  }
+]

@@ -1,0 +1,244 @@
+{
+  "examples": [
+    {
+      "preview_id": 47,
+      "key": "782",
+      "label": "S3154-54821-0476",
+      "panel": "Star (F9)",
+      "cls": "STAR",
+      "z": 4.043602e-05,
+      "msp_joint": 5.95034384400028,
+      "msp_images_only": 638.5894467790389,
+      "flux_ratio_joint": 1.057952418071321,
+      "flux_ratio_images_only": 1.0889973522681708,
+      "survey": "legacy"
+    },
+    {
+      "preview_id": 73,
+      "key": "593",
+      "label": "S0500-51994-0532",
+      "panel": "QSO \\ \\boldmath$z = 1.41$",
+      "cls": "QSO",
+      "z": 1.405917,
+      "msp_joint": 3.844187662292127,
+      "msp_images_only": 88.52074652387672,
+      "flux_ratio_joint": 1.0634880301962943,
+      "flux_ratio_images_only": 1.1608869130778068,
+      "survey": "legacy"
+    },
+    {
+      "preview_id": 17,
+      "key": "1022",
+      "label": "S0501-52235-0380",
+      "panel": "Galaxy \\ \\boldmath$z = 0.09$",
+      "cls": "GALAXY",
+      "z": 0.09170993,
+      "msp_joint": 2.9785225456295454,
+      "msp_images_only": 357.8555091472224,
+      "flux_ratio_joint": 0.9681892383749952,
+      "flux_ratio_images_only": 1.0117635943377363,
+      "survey": "legacy"
+    },
+    {
+      "preview_id": 74,
+      "key": "1143",
+      "label": "S0500-51994-0622",
+      "panel": "QSO \\ \\boldmath$z = 1.16$",
+      "cls": "QSO",
+      "z": 1.159956,
+      "msp_joint": 3.0086495806726092,
+      "msp_images_only": 42.24911077141755,
+      "flux_ratio_joint": 1.1548106552880268,
+      "flux_ratio_images_only": 1.1333233947406518,
+      "survey": "legacy"
+    }
+  ],
+  "stats": {
+    "images_s123": {
+      "joint_run": "clean_s123",
+      "images_only_run": "imgonly_s123",
+      "recipe_matched": true,
+      "n": 89,
+      "joint_lower": 88,
+      "ties": 0,
+      "median_reference": 98.54248086808552,
+      "median_joint": 6.007246037633813
+    },
+    "base_s123": {
+      "joint_run": "clean_s123",
+      "images_only_run": "imgonly_s123",
+      "recipe_matched": true,
+      "n": 82,
+      "joint_lower": 43,
+      "ties": 0,
+      "median_reference": 6.921473550006764,
+      "median_joint": 6.521743858907358
+    },
+    "class_median_joint_msp_s123": {
+      "GALAXY": 4.561280090368338,
+      "STAR": 18.698556347292485,
+      "QSO": 4.367146739114013
+    },
+    "class_median_images_only_msp_s123": {
+      "GALAXY": 87.08880597228249,
+      "STAR": 902.5499186720224,
+      "QSO": 75.165854843035
+    },
+    "images_s42": {
+      "joint_run": "clean_s42",
+      "images_only_run": "imgonly_s42",
+      "recipe_matched": true,
+      "n": 89,
+      "joint_lower": 88,
+      "ties": 0,
+      "median_reference": 176.05803850716006,
+      "median_joint": 6.5872423995355955
+    },
+    "base_s42": {
+      "joint_run": "clean_s42",
+      "images_only_run": "imgonly_s42",
+      "recipe_matched": true,
+      "n": 82,
+      "joint_lower": 47,
+      "ties": 0,
+      "median_reference": 8.42877547556224,
+      "median_joint": 6.648690864751378
+    },
+    "images_s7": {
+      "joint_run": "clean_s7",
+      "images_only_run": "imgonly_s7",
+      "recipe_matched": true,
+      "n": 89,
+      "joint_lower": 88,
+      "ties": 0,
+      "median_reference": 142.77308138552874,
+      "median_joint": 6.973439665326468
+    },
+    "base_s7": {
+      "joint_run": "clean_s7",
+      "images_only_run": "imgonly_s7",
+      "recipe_matched": true,
+      "n": 82,
+      "joint_lower": 43,
+      "ties": 0,
+      "median_reference": 7.8562938190586795,
+      "median_joint": 7.2988790828468115
+    }
+  },
+  "selection": "Author's selection from the 89 withheld spectra: an F9 star, a z = 0.09 galaxy and two quasars. preview_id is an internal index into the 89 withheld spectra.",
+  "msp": "mean squared pull per bin over the whole spectrum, physical view; joint_lower counts strictly lower MSP, ties counted separately",
+  "comparison_scope": "Seed-matched images-only controls of the clean recipe (imgonly_s123/s42/s7: all 889 loaded spectra withheld, objective divided by the fitted pixel count, otherwise the clean recipe and source 79b9d2db) against clean_s123/s42/s7 at update 960,201. The displayed fields are clean_s123 and imgonly_s123.",
+  "inputs": {
+    "spectra/imgonly_s123/COMPLETE.json": {
+      "source": "external-artifact:COMPLETE.json",
+      "sha256": "a7e4e712fb848db5d87229bc78e33bbb6bbee54b33d9fb489c1d7779611d5600"
+    },
+    "spectra/imgonly_s123/fiber_metrics.json": {
+      "source": "external-artifact:fiber_metrics.json",
+      "sha256": "f310e69ae0721a18951fb0dbf9bdf72c4fa995d9b00ad33e4d9177e2315fec42"
+    },
+    "spectra/imgonly_s123/fiber_spectra.npz": {
+      "source": "external-artifact:fiber_spectra.npz",
+      "sha256": "f9e7df72572e44b46236a2298bff718c1a7773d362e2215ec1979c908b2590b1"
+    },
+    "spectra/clean_s123/COMPLETE.json": {
+      "source": "external-artifact:COMPLETE.json",
+      "sha256": "1aba1ceee15d62160f9808dbe8ce5c597996c155fc4bebf4aeeb43d374c394c4"
+    },
+    "spectra/clean_s123/fiber_metrics.json": {
+      "source": "external-artifact:fiber_metrics.json",
+      "sha256": "1c31c5be187a79763a164a83407d82fdcff807e7acfa0e1005ad7006f3be3113"
+    },
+    "spectra/clean_s123/fiber_spectra.npz": {
+      "source": "external-artifact:fiber_spectra.npz",
+      "sha256": "21cd7a3fa1b573aa7205e337026433ead1e22fba12301a2a7c27c109a68614bc"
+    },
+    "ledgers/imgonly_s123.txt": {
+      "source": "external-artifact:ARCHIVED_CKPTS.txt",
+      "sha256": "d6340bdd66eb6d523d5f138269d81fc11a21bef1eb17f9eb89dc8fc79d405fab"
+    },
+    "gri/seed_123/BASELINE.json": {
+      "source": "external-artifact:BASELINE.json",
+      "sha256": "6e00970a3cf5787595264b27d6e8329b11e7ae91b5fff5eed9165f7e7c8c99ad"
+    },
+    "gri/seed_123/predictions.npz": {
+      "source": "external-artifact:predictions.npz",
+      "sha256": "93d4ea629cd6b657a79d208180d7032e7e5ce1e2dad7a2be3b1b78f5c1a5b1a8"
+    },
+    "spectra/imgonly_s42/COMPLETE.json": {
+      "source": "external-artifact:COMPLETE.json",
+      "sha256": "3a9863e4acdfe06f339f7b0db7c5fd3bce6a3dc7b141a6ee58243fb9edd1407c"
+    },
+    "spectra/imgonly_s42/fiber_metrics.json": {
+      "source": "external-artifact:fiber_metrics.json",
+      "sha256": "e6e37b921de7cf5e98b1c1f75a7216e223a9155d4b4256151494bbb00a1a79e0"
+    },
+    "spectra/clean_s42/COMPLETE.json": {
+      "source": "external-artifact:COMPLETE.json",
+      "sha256": "d048b6da588075de2bb302548a03113c8eb9192a52cdff0019ee6fe34733344a"
+    },
+    "spectra/clean_s42/fiber_metrics.json": {
+      "source": "external-artifact:fiber_metrics.json",
+      "sha256": "4e638d25944398c4319b7285c6cc02fe743958bf340bf6b02f1f1f1b025aab53"
+    },
+    "ledgers/imgonly_s42.txt": {
+      "source": "external-artifact:ARCHIVED_CKPTS.txt",
+      "sha256": "dcc5a3448813886d5e631bf588eb955bac0085ca175737a5056f0dbb96e944ec"
+    },
+    "gri/seed_42/BASELINE.json": {
+      "source": "external-artifact:BASELINE.json",
+      "sha256": "7c5eb2cf325ba866a50e46dc53bf58dda6c65f224fd77148e32a7b1937a73d79"
+    },
+    "gri/seed_42/predictions.npz": {
+      "source": "external-artifact:predictions.npz",
+      "sha256": "b2c575136d3ab28968450b6f817c2936d230ed610cb959f6fb584fd4ad034343"
+    },
+    "spectra/imgonly_s7/COMPLETE.json": {
+      "source": "external-artifact:COMPLETE.json",
+      "sha256": "6204b9d2cff8a3f645db7937bd06adc64f40980ad71679cfcae2fdd115fbbb3c"
+    },
+    "spectra/imgonly_s7/fiber_metrics.json": {
+      "source": "external-artifact:fiber_metrics.json",
+      "sha256": "15f1133cd6fe713d46e01a21095fc9f086ac8453aea7f37a972be0acc6a0d257"
+    },
+    "spectra/clean_s7/COMPLETE.json": {
+      "source": "external-artifact:COMPLETE.json",
+      "sha256": "01084d9b7eed98c98e7248166b0a4a7673e3a8b8087bec9f44a8c32d9368b97d"
+    },
+    "spectra/clean_s7/fiber_metrics.json": {
+      "source": "external-artifact:fiber_metrics.json",
+      "sha256": "8ea471ed0bbdf853bceb03259de966c0cbcc78abb421641779418e65276e4d2b"
+    },
+    "ledgers/imgonly_s7.txt": {
+      "source": "external-artifact:ARCHIVED_CKPTS.txt",
+      "sha256": "027b6f77700e3bcee32d01f901918ad6ec31713f0e2328ee1e26d2a5917bbab9"
+    },
+    "gri/seed_7/BASELINE.json": {
+      "source": "external-artifact:BASELINE.json",
+      "sha256": "3553f6533838fe3c919568f848001bc5d00229850de581e963d7540827932902"
+    },
+    "gri/seed_7/predictions.npz": {
+      "source": "external-artifact:predictions.npz",
+      "sha256": "0950281177792fd67f26b0019432633b58fd7da18723984c545b68e513bb5825"
+    },
+    "COMPARISON_imgonly.json": {
+      "source": "external-artifact:COMPARISON_imgonly.json",
+      "sha256": "f719406c111a84c897a75dfc9c900b03dcdda7712b6a73a1162d62a1738f98fb"
+    }
+  },
+  "render_provenance": {
+    "run": "clean_s123",
+    "seed": 123,
+    "step": 960201,
+    "checkpoint_sha256": "c91c0a8d22bcb4888bd32568f878f54d3ff43db75eb75d5773b49edfb2929408",
+    "source_commit": "79b9d2db"
+  },
+  "images_only_provenance": {
+    "run": "imgonly_s123",
+    "seed": 123,
+    "step": 960201,
+    "checkpoint": "external-artifact:checkpoint_step_960201.pt",
+    "checkpoint_sha256": "e53e9578b9d849417392960d9a62795984f5479c818c6e0ab4f1f7a490989912",
+    "source_commit": "79b9d2db"
+  }
+}

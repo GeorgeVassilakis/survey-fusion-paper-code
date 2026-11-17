@@ -1,0 +1,106 @@
+{
+  "n_templates": 32,
+  "n_knots": 96,
+  "knot_range_angstrom": [
+    2980.000000000001,
+    11230.0
+  ],
+  "peak_wavelength_angstrom": [
+    3064.4039973356803,
+    3107.4983507313473,
+    3379.093236982335,
+    3523.6666647281986,
+    3573.2194337824044,
+    3674.425475248434,
+    3831.634598731453,
+    3885.5184259371217,
+    3940.159859289381,
+    4225.112149187256,
+    4344.78206683254,
+    4530.672183546727,
+    4530.672183546727,
+    5066.192328805863,
+    5508.97682719721,
+    5907.385552352295,
+    5990.460317729441,
+    6334.607537554052,
+    6423.6902521497495,
+    6985.119947531988,
+    7083.35072868358,
+    7182.962915800743,
+    7182.962915800743,
+    7386.4094872126525,
+    8856.7993038869,
+    9107.655121985394,
+    9107.655121985394,
+    9630.882605396499,
+    10184.169088158129,
+    11074.26392743879,
+    11074.26392743879,
+    11074.26392743879
+  ],
+  "width68_angstrom": {
+    "median": 994.5439065783462,
+    "min": 86.01482194939503,
+    "max": 7549.14518440592
+  },
+  "usage_sorted": [
+    0.22082619360886274,
+    0.14042480654176367,
+    0.12394847274287103,
+    0.06869954680594527,
+    0.05050062105020499,
+    0.03524637658079973,
+    0.03133611772631415,
+    0.03068977479105697,
+    0.026611951403519928,
+    0.02262113543175325,
+    0.020083288113639613,
+    0.019866586586016526,
+    0.018959543105872535,
+    0.01781099239795804,
+    0.016084576135548194,
+    0.015688600164723586,
+    0.012693428171167092,
+    0.012475312542904295,
+    0.01234852719290003,
+    0.01199780620769989,
+    0.0115665279410946,
+    0.011434794337224096,
+    0.011292265434179502,
+    0.010605882707117664,
+    0.009879070574952293,
+    0.008077589738141693,
+    0.007925492973291346,
+    0.004541722882068759,
+    0.004345725039264306,
+    0.0042333429518468845,
+    0.003799248564704366,
+    0.0033846795545928858
+  ],
+  "templates_for_90_percent_usage": 20,
+  "n_eff": {
+    "weighted": {
+      "0.16": 4.213920007657969,
+      "0.5": 6.305451973298736,
+      "0.84": 10.392456452969762
+    },
+    "unweighted_median": 5.75320901964475
+  },
+  "shift_factor": {
+    "weighted": {
+      "0.16": -0.08821409739854502,
+      "0.5": 0.06529989472081099,
+      "0.84": 0.2604373295805593
+    },
+    "unweighted_median": 0.02627954579871128
+  },
+  "definition": "Descriptive statistics of the paper run's learned spectral dictionary and its use. CPU, evaluation only.\n\nTemplates are evaluated at their 96 knots at zero shift; knot wavelengths are exp(log_mid + scale * grid) with the\nglobal log-wavelength bounds (asserted against the field's stored scale). A template's weight in a component is\nw_jk * I_k, where w = softplus(sed coefficients) and I_k is the template's integral over log wavelength (knots are\nuniform in log wavelength). Per component: shares p_jk, effective number of templates 1 / sum_k p_jk^2, and weight\nA_j * sum_k w_jk I_k with A_j the component flux amplitude. Usage of template k is the weighted mean of p_jk.\nTemplate width: the log-wavelength interval holding the central 68 percent of its integral, in angstroms at its\npeak. Shifts are reported as the wavelength factor exp(scale * shift) - 1, weighted like usage; no interpretation.",
+  "render_provenance": {
+    "run": "clean_s123",
+    "seed": 123,
+    "step": 960201,
+    "checkpoint_sha256": "c91c0a8d22bcb4888bd32568f878f54d3ff43db75eb75d5773b49edfb2929408",
+    "source_commit": "79b9d2db152f89e36a419b77a70134622ab85c28"
+  }
+}

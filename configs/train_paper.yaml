@@ -1,0 +1,7 @@
+# Paper recipe with the displayed fit's seed. Supply machine paths using configure_paper.py.
+defaults:
+  - train_sdss_cosmos_full84_paper
+  - _self_
+run:
+  seed: 123
+  run_name: joint_s123

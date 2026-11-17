@@ -1,0 +1,18 @@
+name: cuda
+expected_device: cuda
+allow_cpu_fallback: false
+require_slurm: false
+required_slurm_partitions: []
+precision_policy: tf32
+distributed:
+  enabled: false
+  backend: nccl
+  master_addr: 127.0.0.1
+  master_port: null
+  batch_mode: global
+trainer:
+  dataloader_num_workers: 4
+  dataloader_pin_memory: true
+logging:
+  wandb:
+    mode: offline

@@ -1,0 +1,18 @@
+# Gaussian splat field with a shared spectral dictionary (the paper model).
+# Only keys the splat model and its seeding read.
+name: splat
+n_splats: 100000
+n_templates: 32
+n_loglam_grid: 96
+# Off-grid band response is dropped, not swept onto the terminal knots, and
+# the terminal knots are tied to their interior neighbours.
+sed_off_grid: zero
+sed_pin_gauge_knots: true
+sed_pad_knots_blue: 0
+sed_pad_knots_red: 0
+init_extent: 1.0
+init_scale: 0.002
+seed_n_scales: 4
+seed_prefer_band: null
+seed_catalog: null
+sed_rng_reference_templates: 32

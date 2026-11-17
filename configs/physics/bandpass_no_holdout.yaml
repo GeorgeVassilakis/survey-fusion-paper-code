@@ -1,0 +1,9 @@
+bandpasses:
+  u: SLOAN/SDSS.u
+  g: SLOAN/SDSS.g
+  r: SLOAN/SDSS.r
+  i: SLOAN/SDSS.i
+  z: SLOAN/SDSS.z
+training_bands: [u, g, r, i, z]
+held_out_band: null
+lambda_step_angstrom: 20.0

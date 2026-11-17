@@ -1,0 +1,7 @@
+project_root_marker: .project-root
+observation_root: ${oc.env:SURVEY_FUSION_OBSERVATION_ROOT,data/sdss_cosmos}
+bandpass_root: ${oc.env:SURVEY_FUSION_BANDPASS_ROOT,data}
+filters_dir: ${paths.bandpass_root}/filters
+registry_path: ${paths.bandpass_root}/registry/mbr.csv
+outdir: ${oc.env:SURVEY_FUSION_OUTDIR,outputs}
+cache_dir: ${oc.env:SURVEY_FUSION_CACHE_DIR,.cache}

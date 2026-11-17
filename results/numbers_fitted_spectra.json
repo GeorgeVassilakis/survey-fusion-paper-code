@@ -1,0 +1,106 @@
+{
+  "description": "Fitted-spectrum flux recovery and MSP by brightness tercile (Section 4.2 table).",
+  "definitions": {
+    "population": "800 fitted spectra",
+    "brightness": "observed source flux integrated over the retained bins; ranked brightest first; terciles of floor(800/3) = 266, 266 and the remaining 268",
+    "flux_ratio": "predicted / observed integrated source flux over the retained bins (physical view)",
+    "msp": "mean squared pull over all retained bins, including the 2 percent random holdout",
+    "snr": "median over retained bins of observed flux / sigma, per spectrum",
+    "aggregation": "medians over spectra; quartiles by numpy linear interpolation; within 10 percent means |ratio - 1| <= 0.1"
+  },
+  "terciles": {
+    "brightest": {
+      "n": 266,
+      "median_snr_per_bin": 32.53082750244562,
+      "median_flux_ratio": 0.9934209256694446,
+      "flux_ratio_p25": 0.984363706766141,
+      "flux_ratio_p75": 1.0017520811507648,
+      "fraction_within_10_percent": 0.9736842105263158,
+      "median_msp": 4.373411044709897,
+      "min_flux_ratio": 0.8455140174516604,
+      "observed_flux_range": [
+        43939.88343623908,
+        1113422.559116501
+      ],
+      "n_boss": 7,
+      "n_by_class": {
+        "GALAXY": 106,
+        "QSO": 5,
+        "STAR": 155
+      }
+    },
+    "middle": {
+      "n": 266,
+      "median_snr_per_bin": 9.22403421703148,
+      "median_flux_ratio": 0.9930511592904769,
+      "flux_ratio_p25": 0.9742119718714082,
+      "flux_ratio_p75": 1.0068564227313401,
+      "fraction_within_10_percent": 0.9624060150375939,
+      "median_msp": 1.4376867562639926,
+      "min_flux_ratio": 0.844301493440074,
+      "observed_flux_range": [
+        9073.264063672716,
+        43253.105607472346
+      ],
+      "n_boss": 60,
+      "n_by_class": {
+        "GALAXY": 137,
+        "QSO": 54,
+        "STAR": 75
+      }
+    },
+    "faintest": {
+      "n": 268,
+      "median_snr_per_bin": 1.8717357624825144,
+      "median_flux_ratio": 0.9769386699163451,
+      "flux_ratio_p25": 0.9568066722835353,
+      "flux_ratio_p75": 1.003086792256962,
+      "fraction_within_10_percent": 0.9477611940298507,
+      "median_msp": 0.9930366520325358,
+      "min_flux_ratio": 0.6982607591976593,
+      "observed_flux_range": [
+        1117.8393363262867,
+        9040.929975907085
+      ],
+      "n_boss": 231,
+      "n_by_class": {
+        "GALAXY": 190,
+        "QSO": 50,
+        "STAR": 28
+      }
+    }
+  },
+  "all": {
+    "n": 800,
+    "median_snr_per_bin": 9.252866561560136,
+    "median_flux_ratio": 0.989235966248368,
+    "flux_ratio_p25": 0.9730789611747428,
+    "flux_ratio_p75": 1.0035229019632235,
+    "fraction_within_10_percent": 0.96125,
+    "median_msp": 1.453750348967908,
+    "min_flux_ratio": 0.6982607591976593,
+    "observed_flux_range": [
+      1117.8393363262867,
+      1113422.559116501
+    ],
+    "n_boss": 298,
+    "n_by_class": {
+      "GALAXY": 433,
+      "QSO": 109,
+      "STAR": 258
+    }
+  },
+  "inputs": {
+    "spectra/clean_s123/fiber_metrics.json": "1c31c5be187a79763a164a83407d82fdcff807e7acfa0e1005ad7006f3be3113",
+    "spectra/clean_s123/fiber_spectra.npz": "21cd7a3fa1b573aa7205e337026433ead1e22fba12301a2a7c27c109a68614bc"
+  },
+  "cross_check": "n, median flux ratio, median MSP and the count within 10 percent equal external-artifact:numbers_fitted_objects.json population",
+  "script": "external-artifact:make_fitted_spectra_table.py",
+  "render_provenance": {
+    "run": "clean_s123",
+    "seed": 123,
+    "step": 960201,
+    "checkpoint_sha256": "c91c0a8d22bcb4888bd32568f878f54d3ff43db75eb75d5773b49edfb2929408",
+    "source_commit": "79b9d2db"
+  }
+}

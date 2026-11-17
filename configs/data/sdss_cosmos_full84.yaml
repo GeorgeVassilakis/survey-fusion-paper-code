@@ -1,0 +1,28 @@
+name: sdss
+observation_root: ${paths.observation_root}
+scene_manifest_path: ${data.observation_root}/manifests/full84_individual_frames_manifest.json
+reference_band: r
+fiber_diameter_arcsec: 2.0
+psf_fwhm_arcsec: null
+pointing_offsets_arcsec:
+  u: [0.0, 0.0]
+  g: [0.0, 0.0]
+  r: [0.0, 0.0]
+  i: [0.0, 0.0]
+  z: [0.0, 0.0]
+training_flux_scale: 1.0e17
+spectra:
+  include_roles: ["science", "sky"]
+  include_classes: ["all"]
+kernel_samples_k: 16
+spec_min_ivar: 0.0
+spec_require_clean_mask: true
+holdout_region:
+  enabled: false
+  center_radec_deg: [0.0, 0.0]
+  radius_arcsec: 0.0
+  exclude_spectra_in_region: false
+region_metrics:
+  enabled: true
+  primary_region: null
+  regions: []

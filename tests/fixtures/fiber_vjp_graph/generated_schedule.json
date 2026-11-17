@@ -1,0 +1,518 @@
+[
+  {
+    "kind": "pointwise",
+    "kernel": "_vjp_stage_0",
+    "inputs": [
+      "up_1",
+      "k_1",
+      "sig_1",
+      "lo_1"
+    ],
+    "outputs": [
+      "sub_3",
+      "sub_10",
+      "sub_18",
+      "sub_27",
+      "mul_55",
+      "mul_59"
+    ],
+    "cols": 1,
+    "ops": 109
+  },
+  {
+    "kind": "pointwise",
+    "kernel": "_vjp_stage_1",
+    "inputs": [
+      "up_1",
+      "k_1",
+      "lo_1",
+      "sub_18",
+      "sig_1",
+      "sub_27",
+      "mul_55",
+      "mul_59",
+      "sub_3",
+      "sub_10"
+    ],
+    "outputs": [
+      "where"
+    ],
+    "cols": 96,
+    "ops": 139
+  },
+  {
+    "kind": "pointwise",
+    "kernel": "_vjp_stage_2",
+    "inputs": [
+      "where",
+      "k_1"
+    ],
+    "outputs": [
+      "div_33"
+    ],
+    "cols": 95,
+    "ops": 13
+  },
+  {
+    "kind": "pointwise",
+    "kernel": "_vjp_stage_3",
+    "inputs": [
+      "up_1",
+      "k_1",
+      "lo_1",
+      "sig_1",
+      "div_33"
+    ],
+    "outputs": [
+      "sub_80",
+      "slice_17"
+    ],
+    "cols": 1,
+    "ops": 231
+  },
+  {
+    "kind": "pointwise",
+    "kernel": "_vjp_stage_4",
+    "inputs": [
+      "sub_80",
+      "div_33",
+      "slice_17",
+      "g_1",
+      "v_1"
+    ],
+    "outputs": [
+      "where_2",
+      "_to_copy_7"
+    ],
+    "cols": 96,
+    "ops": 22
+  },
+  {
+    "kind": "pointwise",
+    "kernel": "_vjp_stage_5",
+    "inputs": [
+      "where_2",
+      "k_1",
+      "lo_1",
+      "sig_1",
+      "up_1"
+    ],
+    "outputs": [
+      "slice_23",
+      "neg_10",
+      "add_110",
+      "add_115",
+      "masked_fill_",
+      "masked_fill__1"
+    ],
+    "cols": 1,
+    "ops": 492
+  },
+  {
+    "kind": "pointwise",
+    "kernel": "_vjp_stage_6",
+    "inputs": [
+      "where_2"
+    ],
+    "outputs": [
+      "slice_22"
+    ],
+    "cols": 94,
+    "ops": 2
+  },
+  {
+    "kind": "pointwise",
+    "kernel": "_vjp_stage_7",
+    "inputs": [
+      "slice_22"
+    ],
+    "outputs": [
+      "neg_9"
+    ],
+    "cols": 94,
+    "ops": 2
+  },
+  {
+    "kind": "pointwise",
+    "kernel": "_vjp_stage_8",
+    "inputs": [
+      "slice_23",
+      "neg_9",
+      "slice_22",
+      "neg_10",
+      "where",
+      "k_1"
+    ],
+    "outputs": [
+      "mul_265",
+      "div_104"
+    ],
+    "cols": 95,
+    "ops": 28
+  },
+  {
+    "kind": "pointwise",
+    "kernel": "_vjp_stage_9",
+    "inputs": [
+      "mul_265",
+      "div_104"
+    ],
+    "outputs": [
+      "neg_62",
+      "neg_63"
+    ],
+    "cols": 95,
+    "ops": 4
+  },
+  {
+    "kind": "pointwise",
+    "kernel": "_vjp_stage_10",
+    "inputs": [
+      "up_1",
+      "k_1",
+      "lo_1",
+      "neg_63",
+      "div_104"
+    ],
+    "outputs": [
+      "mul_266",
+      "mul_268"
+    ],
+    "cols": 96,
+    "ops": 31
+  },
+  {
+    "kind": "pointwise",
+    "kernel": "_vjp_stage_11",
+    "inputs": [
+      "k_1",
+      "lo_1",
+      "sig_1",
+      "mul_268",
+      "up_1",
+      "mul_266"
+    ],
+    "outputs": [
+      "neg_68",
+      "neg_69",
+      "neg_73",
+      "mul_286",
+      "mul_297",
+      "neg_78",
+      "neg_79",
+      "mul_326",
+      "mul_337",
+      "neg_90",
+      "mul_371",
+      "neg_99",
+      "neg_100",
+      "mul_391",
+      "neg_109"
+    ],
+    "cols": 96,
+    "ops": 222
+  },
+  {
+    "kind": "sum",
+    "outputs": [
+      "sum_2"
+    ],
+    "inputs": [
+      "mul_268"
+    ],
+    "dims": [
+      2
+    ],
+    "keepdim": true
+  },
+  {
+    "kind": "sum",
+    "outputs": [
+      "sum_10"
+    ],
+    "inputs": [
+      "mul_268"
+    ],
+    "dims": [
+      2
+    ],
+    "keepdim": true
+  },
+  {
+    "kind": "sum",
+    "outputs": [
+      "sum_17"
+    ],
+    "inputs": [
+      "mul_266"
+    ],
+    "dims": [
+      2
+    ],
+    "keepdim": true
+  },
+  {
+    "kind": "sum",
+    "outputs": [
+      "sum_3"
+    ],
+    "inputs": [
+      "neg_68"
+    ],
+    "dims": [
+      2
+    ],
+    "keepdim": true
+  },
+  {
+    "kind": "sum",
+    "outputs": [
+      "sum_4"
+    ],
+    "inputs": [
+      "neg_69"
+    ],
+    "dims": [
+      2
+    ],
+    "keepdim": true
+  },
+  {
+    "kind": "sum",
+    "outputs": [
+      "sum_5"
+    ],
+    "inputs": [
+      "neg_73"
+    ],
+    "dims": [
+      2
+    ],
+    "keepdim": true
+  },
+  {
+    "kind": "sum",
+    "outputs": [
+      "sum_6"
+    ],
+    "inputs": [
+      "mul_286"
+    ],
+    "dims": [
+      2
+    ],
+    "keepdim": true
+  },
+  {
+    "kind": "sum",
+    "outputs": [
+      "sum_7"
+    ],
+    "inputs": [
+      "mul_297"
+    ],
+    "dims": [
+      2
+    ],
+    "keepdim": true
+  },
+  {
+    "kind": "sum",
+    "outputs": [
+      "sum_8"
+    ],
+    "inputs": [
+      "neg_78"
+    ],
+    "dims": [
+      2
+    ],
+    "keepdim": true
+  },
+  {
+    "kind": "sum",
+    "outputs": [
+      "sum_9"
+    ],
+    "inputs": [
+      "neg_79"
+    ],
+    "dims": [
+      2
+    ],
+    "keepdim": true
+  },
+  {
+    "kind": "sum",
+    "outputs": [
+      "sum_11"
+    ],
+    "inputs": [
+      "mul_326"
+    ],
+    "dims": [
+      2
+    ],
+    "keepdim": true
+  },
+  {
+    "kind": "sum",
+    "outputs": [
+      "sum_12"
+    ],
+    "inputs": [
+      "mul_337"
+    ],
+    "dims": [
+      2
+    ],
+    "keepdim": true
+  },
+  {
+    "kind": "sum",
+    "outputs": [
+      "sum_13"
+    ],
+    "inputs": [
+      "neg_90"
+    ],
+    "dims": [
+      2
+    ],
+    "keepdim": true
+  },
+  {
+    "kind": "sum",
+    "outputs": [
+      "sum_14"
+    ],
+    "inputs": [
+      "mul_371"
+    ],
+    "dims": [
+      2
+    ],
+    "keepdim": true
+  },
+  {
+    "kind": "sum",
+    "outputs": [
+      "sum_15"
+    ],
+    "inputs": [
+      "neg_99"
+    ],
+    "dims": [
+      2
+    ],
+    "keepdim": true
+  },
+  {
+    "kind": "sum",
+    "outputs": [
+      "sum_16"
+    ],
+    "inputs": [
+      "neg_100"
+    ],
+    "dims": [
+      2
+    ],
+    "keepdim": true
+  },
+  {
+    "kind": "sum",
+    "outputs": [
+      "sum_18"
+    ],
+    "inputs": [
+      "mul_391"
+    ],
+    "dims": [
+      2
+    ],
+    "keepdim": true
+  },
+  {
+    "kind": "sum",
+    "outputs": [
+      "sum_19"
+    ],
+    "inputs": [
+      "neg_109"
+    ],
+    "dims": [
+      2
+    ],
+    "keepdim": true
+  },
+  {
+    "kind": "pointwise",
+    "kernel": "_vjp_stage_14",
+    "inputs": [
+      "k_1",
+      "lo_1",
+      "sig_1",
+      "sum_2",
+      "up_1",
+      "sum_4",
+      "sum_9",
+      "sum_10",
+      "sum_16",
+      "sum_17",
+      "sum_5",
+      "sum_11",
+      "sum_12",
+      "sum_13",
+      "sum_18",
+      "sum_19",
+      "sum_3",
+      "sum_6",
+      "sum_7",
+      "sum_8",
+      "sum_14",
+      "sum_15"
+    ],
+    "outputs": [
+      "add_185",
+      "masked_fill__2",
+      "masked_fill__3"
+    ],
+    "cols": 1,
+    "ops": 276
+  },
+  {
+    "kind": "pointwise",
+    "kernel": "_vjp_stage_15",
+    "inputs": [
+      "add_115",
+      "add_110",
+      "masked_fill_",
+      "masked_fill__1",
+      "neg_62",
+      "mul_265",
+      "k_1",
+      "lo_1",
+      "sig_1",
+      "mul_268",
+      "up_1",
+      "mul_297",
+      "mul_337",
+      "mul_371",
+      "mul_266",
+      "mul_391",
+      "neg_63",
+      "div_104",
+      "sub_3",
+      "sub_10",
+      "add_185",
+      "masked_fill__2",
+      "masked_fill__3"
+    ],
+    "outputs": [
+      "_to_copy_8"
+    ],
+    "cols": 96,
+    "ops": 275
+  }
+]

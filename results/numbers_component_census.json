@@ -1,0 +1,53 @@
+{
+  "n_components": 2855026,
+  "r_band_exposure": 164,
+  "frac_components_axis_ratio_gt10": 0.053107047011130545,
+  "frac_amplitude_axis_ratio_gt10": 0.24068321516250712,
+  "frac_r_flux_axis_ratio_gt10": 0.22398559583582772,
+  "median_axis_ratio": 1.4866359953974122,
+  "p90_axis_ratio": 4.4838939650797975,
+  "p99_axis_ratio": 151.7874255487394,
+  "max_major_sigma_arcsec": 251.86458471140656,
+  "major_fwhm_arcsec_percentiles": {
+    "5": 0.022296503601163052,
+    "25": 0.06318265807333798,
+    "50": 0.1866652871937515,
+    "75": 0.5817704239396464,
+    "95": 9.45271856481763,
+    "99": 183.1943441591017
+  },
+  "by_major_fwhm_arcsec": [
+    {
+      "lo": 0,
+      "hi": 0.5,
+      "frac_components": 0.7284045749495801,
+      "frac_r_flux": 0.6782207140788605
+    },
+    {
+      "lo": 0.5,
+      "hi": 1.4,
+      "frac_components": 0.11398670274806605,
+      "frac_r_flux": 0.06801571057273424
+    },
+    {
+      "lo": 1.4,
+      "hi": 5.0,
+      "frac_components": 0.08564020082479108,
+      "frac_r_flux": 0.06382417792736053
+    },
+    {
+      "lo": 5.0,
+      "hi": null,
+      "frac_components": 0.07196852147756273,
+      "frac_r_flux": 0.18993939742104474
+    }
+  ],
+  "definition": "axes = exp(log_scales) x model-grid half-width x pixel scale (sigma, arcsec); FWHM = 2.3548 sigma; amplitude = softplus(raw_flux); r_flux = splat_band_amplitudes through a fitted r bandpass",
+  "render_provenance": {
+    "run": "clean_s123",
+    "seed": 123,
+    "step": 960201,
+    "checkpoint_sha256": "c91c0a8d22bcb4888bd32568f878f54d3ff43db75eb75d5773b49edfb2929408",
+    "source_commit": "79b9d2db152f89e36a419b77a70134622ab85c28"
+  }
+}

@@ -1,0 +1,264 @@
+# Canonical training recipe; select seed 123 with train_paper.yaml. Every number is either
+# derived from the data or stated as a hyperparameter:
+#  - the objective is divided by the fitted datum count, and each spectral bin
+#    is weighted spectral_bin_weight times an image pixel;
+#  - the budget is a whole number of epochs (fitted pixels / pixel batch);
+#  - a checkpoint is kept at every epoch boundary and at the schedule events.
+# Every science key is a literal, never an environment interpolation. Keys
+# marked ??? are machine-specific paths the launch must supply; train.py
+# refuses to start while any is missing.
+defaults:
+  - data: sdss_cosmos_full84
+  - model: splat
+  - physics/bandpass_no_holdout
+  - calibration: sdss
+  - paths: default
+  - platform: cuda
+  - _self_
+
+mode: train
+
+checkpoint:
+  path: null
+
+eval:
+  recompute_predictions: true
+  predictions_path: null
+  source_predictions_path: null
+  allow_operator_reinterpretation: false
+
+run:
+  run_name: full84_paper
+  seed: 42
+  device: auto
+  append_timestamp: true
+  use_outdir_directly: false
+
+resume:
+  path: null
+  model_only: false
+
+data:
+  # One prepared store for every model seed, loaded and never built (build it
+  # with scripts/prepare_data.py). The digest keys the observation paths too:
+  # override it together with them on another machine.
+  prepare_seed: 42
+  expected_prepared_digest: b6c784cfeb936bc04e8fa5efbadb8e36b64f196b94ac91db6db04acbe38fed49
+  prepared_dir: ???
+  datum_spill_dir: null
+  random_holdout:
+    fraction: 0.02
+    seed: 20260723
+  spectral_response_mode: metadata
+  spectral_lsf_sampling: native
+  spectral_response_missing_policy: error
+  spectral_response_metadata_path: ???
+  spectral_flux_system: sdss_imaging
+
+calibration:
+  spectral_nuisance:
+    enabled: false
+
+trainer:
+  kernel_samples_k: 32
+  replica_samples_k: 16
+  epochs: 11
+  max_steps: 0
+  # Base rate of the spectral calibration factors, which are off here.
+  learning_rate: 0.0005
+  beta1: 0.9
+  beta2: 0.999
+  adam_eps: 1.0e-08
+  eval_interval: 100
+  grad_clip: 1.0
+  validate_kernel_samples: false
+  band_loss_log_every_n_steps: 0
+  pixel_batch_size: 10000
+  spec_batch_size: 64
+  spectral_bin_weight: 5.0
+  image_importance_sampling:
+    enabled: true
+    max_importance_weight: 20.0
+  dataloader_drop_last: true
+  psf_model: eigen_mog
+  allow_psf_model_change: false
+  eigen_mog_sidecar: ???
+  eigen_mog_support_radius: 18
+  eigen_mog_compute_dtype: float64
+  eigen_mog_execution: cached
+  image_variance: poisson_current
+  image_variance_outlier_pull: 10.0
+  image_pixel_mask: ???
+  field_overlap_table: ???
+  # Withheld from the objective: two exposures per band and the 89 test
+  # spectra of the fixed split.
+  exclude_exposure_labels:
+    - g-001462-4-0166
+    - r-001907-3-0188
+    - i-002125-1-0209
+    - z-001462-5-0166
+    - u-001462-5-0166
+    - u-001462-4-0166
+    - g-001462-3-0165
+    - r-001462-3-0167
+    - i-001462-4-0169
+    - z-001907-3-0186
+  exclude_spectrum_labels:
+    - S0481-51908-0640
+    - S0500-51994-0031
+    - S0500-51994-0033
+    - S0500-51994-0113
+    - S0500-51994-0152
+    - S0500-51994-0170
+    - S0500-51994-0175
+    - S0500-51994-0493
+    - S0500-51994-0494
+    - S0500-51994-0502
+    - S0500-51994-0532
+    - S0500-51994-0539
+    - S0500-51994-0545
+    - S0500-51994-0587
+    - S0500-51994-0593
+    - S0500-51994-0594
+    - S0500-51994-0610
+    - S0500-51994-0622
+    - S0500-51994-0623
+    - S0500-51994-0634
+    - S0500-51994-0636
+    - S0501-52235-0199
+    - S0501-52235-0267
+    - S0501-52235-0269
+    - S0501-52235-0313
+    - S0501-52235-0321
+    - S0501-52235-0372
+    - S0501-52235-0380
+    - S0501-52235-0386
+    - S0501-52235-0387
+    - S0501-52235-0394
+    - S0501-52235-0425
+    - S0501-52235-0430
+    - S0501-52235-0434
+    - S0501-52235-0440
+    - S0501-52235-0472
+    - S0501-52235-0474
+    - S3154-54821-0102
+    - S3154-54821-0116
+    - S3154-54821-0166
+    - S3154-54821-0167
+    - S3154-54821-0411
+    - S3154-54821-0422
+    - S3154-54821-0429
+    - S3154-54821-0431
+    - S3154-54821-0464
+    - S3154-54821-0476
+    - S3154-54821-0482
+    - S3154-54821-0486
+    - S3154-54821-0488
+    - S3154-54821-0493
+    - S3154-54821-0511
+    - S3154-54821-0518
+    - S3154-54821-0557
+    - S3257-54888-0302
+    - S4737-55630-0077
+    - S4737-55630-0108
+    - S4737-55630-0137
+    - S4737-55630-0139
+    - S4737-55630-0160
+    - S4737-55630-0176
+    - S4737-55630-0181
+    - S4737-55630-0184
+    - S4737-55630-0186
+    - S4737-55630-0194
+    - S4737-55630-0197
+    - S4737-55630-0198
+    - S4737-55630-0222
+    - S4737-55630-0263
+    - S4737-55630-0264
+    - S4737-55630-0273
+    - S4737-55630-0313
+    - S4737-55630-0316
+    - S4737-55630-0354
+    - S4737-55630-0357
+    - S4737-55630-0379
+    - S4737-55630-0651
+    - S4737-55630-0732
+    - S4737-55630-0772
+    - S4737-55630-0774
+    - S4737-55630-0776
+    - S4737-55630-0780
+    - S4737-55630-0811
+    - S4737-55630-0855
+    - S4737-55630-0857
+    - S4737-55630-0894
+    - S4737-55630-0937
+    - S4737-55630-0940
+    - S4737-55630-0967
+  analytic_images: true
+  analytic_spectra: true
+  sparse_splat_gradients: true
+  splat_flux_l1: 0.0
+  checkpoint_rng_state: true
+  checkpoint_gauge_sidecar: false
+  position_lr_multiplier: 0.1
+  position_lr_horizon: 30000
+  refine:
+    enabled: true
+    start: 500
+    stop: 15000
+    every: 100
+    grow_target_frac: 0.3
+    grow_scale: 0.0
+    prune_peak_sb_frac: 0.005
+    prune_band_snr: true
+    prune_band_snr_sigma: 1.0e-08
+    prune_axis_ratio: null
+    pair_n_sigma: 8.0
+    gauge_projection: false
+    birth:
+      enabled: false
+    max_splats: 10000000
+    lifecycle_statistics: fitted_images
+  fixed_holdout_eval_every_n_steps: 2500
+  checkpoint_every_n_steps: 50000
+  checkpoint_retain_every_n_steps: 0
+  checkpoint_retain_every_n_epochs: 1
+  # The end of growth and of the position-rate decay.
+  checkpoint_retain_steps: [500, 15000, 30000]
+  checkpoint_archive_dir: null
+  checkpoint_keep_local: 0
+  checkpoint_archive_drain_timeout_s: 600.0
+
+postprocess:
+  # Paper runs are scored by the evaluation scripts, not train-mode
+  # postprocessing; the limits below bound eval mode.
+  enabled: false
+  diagnostic_outputs: [total]
+  profile_timing: true
+  deterministic_supersample: 1
+  deterministic_chunk_size: 16384
+  max_exposures: 1
+  max_fiber_spectra: 12
+  plot_sed_sample_locations: false
+
+logging:
+  epoch_log_every: 100
+  speed:
+    enabled: true
+    log_every_n_steps: 10
+    flush_every_records: 5
+  wandb:
+    enabled: false
+    project: Survey Fusion
+    entity: null
+    run_name: ${run.run_name}
+    mode: online
+    watch_model: false
+    save_code: false
+    log_every_n_steps: 1
+    region_grid_every_n_steps: 0
+    log_artifacts: false
+
+hydra:
+  run:
+    dir: .
+  output_subdir: null

@@ -1,0 +1,9 @@
+spectral_nuisance:
+  enabled: true
+  anchor: image
+  mapping: throughput_mix
+  prior_sigma_log: 0.15
+  prior_weight: 1.0
+  init_scale: 1.0
+  lr_multiplier: 1.0
+  apply_to_predictions: true

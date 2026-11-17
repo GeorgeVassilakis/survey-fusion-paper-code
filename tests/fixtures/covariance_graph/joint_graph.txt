@@ -1,0 +1,76 @@
+
+
+
+def forward(self, logs_1, theta_1, ga_1, gb_1, gd_1):
+    select = torch.ops.aten.select.int(logs_1, 1, 0)
+    mul = torch.ops.aten.mul.Tensor(select, 2.0);  select = None
+    exp = torch.ops.aten.exp.default(mul);  mul = None
+    detach = torch.ops.aten.detach.default(exp)
+    select_1 = torch.ops.aten.select.int(logs_1, 1, 1);  logs_1 = None
+    mul_1 = torch.ops.aten.mul.Tensor(select_1, 2.0);  select_1 = None
+    exp_1 = torch.ops.aten.exp.default(mul_1);  mul_1 = None
+    detach_1 = torch.ops.aten.detach.default(exp_1)
+    cos = torch.ops.aten.cos.default(theta_1)
+    sin = torch.ops.aten.sin.default(theta_1)
+    mul_2 = torch.ops.aten.mul.Tensor(cos, cos)
+    mul_3 = torch.ops.aten.mul.Tensor(mul_2, exp)
+    mul_4 = torch.ops.aten.mul.Tensor(sin, sin)
+    mul_5 = torch.ops.aten.mul.Tensor(mul_4, exp_1)
+    add = torch.ops.aten.add.Tensor(mul_3, mul_5);  mul_3 = mul_5 = None
+    mul_6 = torch.ops.aten.mul.Tensor(cos, sin)
+    sub = torch.ops.aten.sub.Tensor(exp, exp_1)
+    mul_7 = torch.ops.aten.mul.Tensor(mul_6, sub)
+    mul_8 = torch.ops.aten.mul.Tensor(sin, sin)
+    mul_9 = torch.ops.aten.mul.Tensor(mul_8, exp)
+    mul_10 = torch.ops.aten.mul.Tensor(cos, cos)
+    mul_11 = torch.ops.aten.mul.Tensor(mul_10, exp_1)
+    add_1 = torch.ops.aten.add.Tensor(mul_9, mul_11);  mul_9 = mul_11 = None
+    mul_12 = torch.ops.aten.mul.Tensor(gd_1, mul_10);  mul_10 = None
+    mul_13 = torch.ops.aten.mul.Tensor(gd_1, exp_1)
+    mul_14 = torch.ops.aten.mul.Tensor(mul_13, cos)
+    mul_15 = torch.ops.aten.mul.Tensor(mul_13, cos);  mul_13 = None
+    add_2 = torch.ops.aten.add.Tensor(mul_15, mul_14);  mul_15 = mul_14 = None
+    mul_16 = torch.ops.aten.mul.Tensor(gd_1, mul_8);  mul_8 = None
+    mul_17 = torch.ops.aten.mul.Tensor(gd_1, exp);  gd_1 = None
+    mul_18 = torch.ops.aten.mul.Tensor(mul_17, sin)
+    mul_19 = torch.ops.aten.mul.Tensor(mul_17, sin);  mul_17 = None
+    add_3 = torch.ops.aten.add.Tensor(mul_19, mul_18);  mul_19 = mul_18 = None
+    mul_20 = torch.ops.aten.mul.Tensor(gb_1, mul_6);  mul_6 = None
+    mul_21 = torch.ops.aten.mul.Tensor(gb_1, sub);  gb_1 = sub = None
+    neg = torch.ops.aten.neg.default(mul_20)
+    add_4 = torch.ops.aten.add.Tensor(mul_16, mul_20);  mul_16 = mul_20 = None
+    add_5 = torch.ops.aten.add.Tensor(mul_12, neg);  mul_12 = neg = None
+    mul_22 = torch.ops.aten.mul.Tensor(mul_21, cos)
+    mul_23 = torch.ops.aten.mul.Tensor(mul_21, sin);  mul_21 = None
+    add_6 = torch.ops.aten.add.Tensor(add_2, mul_23);  add_2 = mul_23 = None
+    add_7 = torch.ops.aten.add.Tensor(add_3, mul_22);  add_3 = mul_22 = None
+    mul_24 = torch.ops.aten.mul.Tensor(ga_1, mul_4);  mul_4 = None
+    mul_25 = torch.ops.aten.mul.Tensor(ga_1, exp_1);  exp_1 = None
+    add_8 = torch.ops.aten.add.Tensor(add_5, mul_24);  add_5 = mul_24 = None
+    mul_26 = torch.ops.aten.mul.Tensor(mul_25, sin)
+    mul_27 = torch.ops.aten.mul.Tensor(mul_25, sin);  mul_25 = sin = None
+    add_9 = torch.ops.aten.add.Tensor(add_7, mul_27);  add_7 = mul_27 = None
+    add_10 = torch.ops.aten.add.Tensor(add_9, mul_26);  add_9 = mul_26 = None
+    mul_28 = torch.ops.aten.mul.Tensor(ga_1, mul_2);  mul_2 = None
+    mul_29 = torch.ops.aten.mul.Tensor(ga_1, exp);  ga_1 = exp = None
+    add_11 = torch.ops.aten.add.Tensor(add_4, mul_28);  add_4 = mul_28 = None
+    mul_30 = torch.ops.aten.mul.Tensor(mul_29, cos)
+    mul_31 = torch.ops.aten.mul.Tensor(mul_29, cos);  mul_29 = cos = None
+    add_12 = torch.ops.aten.add.Tensor(add_6, mul_31);  add_6 = mul_31 = None
+    add_13 = torch.ops.aten.add.Tensor(add_12, mul_30);  add_12 = mul_30 = None
+    cos_1 = torch.ops.aten.cos.default(theta_1)
+    mul_32 = torch.ops.aten.mul.Tensor(add_10, cos_1);  add_10 = cos_1 = None
+    sin_1 = torch.ops.aten.sin.default(theta_1);  theta_1 = None
+    neg_1 = torch.ops.aten.neg.default(sin_1);  sin_1 = None
+    mul_33 = torch.ops.aten.mul.Tensor(add_13, neg_1);  add_13 = neg_1 = None
+    add_14 = torch.ops.aten.add.Tensor(mul_32, mul_33);  mul_32 = mul_33 = None
+    detach_2 = torch.ops.aten.detach.default(detach_1);  detach_1 = None
+    mul_34 = torch.ops.aten.mul.Tensor(add_8, detach_2);  add_8 = detach_2 = None
+    mul_35 = torch.ops.aten.mul.Tensor(mul_34, 2.0);  mul_34 = None
+    select_backward = torch.ops.aten.select_backward.default(mul_35, [17, 2], 1, 1);  mul_35 = None
+    detach_3 = torch.ops.aten.detach.default(detach);  detach = None
+    mul_36 = torch.ops.aten.mul.Tensor(add_11, detach_3);  add_11 = detach_3 = None
+    mul_37 = torch.ops.aten.mul.Tensor(mul_36, 2.0);  mul_36 = None
+    select_backward_1 = torch.ops.aten.select_backward.default(mul_37, [17, 2], 1, 0);  mul_37 = None
+    add_15 = torch.ops.aten.add.Tensor(select_backward, select_backward_1);  select_backward = select_backward_1 = None
+    return (add, mul_7, add_1, add_15, add_14)
